@@ -1,0 +1,15 @@
+version: "3"
+services:
+  api-database:
+    image: mongo:5.0-focal
+    container_name: "api-database"
+    environment:
+      - MONGO_INITDB_DATABASE=currency_db
+    ports:
+      - 27017:27017
+#  api:
+#    image: api-docker-image
+#    ports:
+#      - 9091:8080
+#    links:
+#      - api-database
